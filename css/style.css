@@ -1,0 +1,489 @@
+html{
+    background-color:rgb(0, 0, 0);
+    scroll-behavior: smooth;
+    scroll-padding-top: 135px; 
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color:rgb(234, 224, 227); 
+}
+
+
+/*menu*/
+.menu{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+/*header*/
+header{
+    background-color:rgb(245, 218, 210);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 55px;
+}
+h1{
+    color: white;
+    
+}
+/*logo*/
+.fa-taillecolor{
+    font-size: 3em;
+    color: white;
+}
+/*fin header*/
+
+/*debut nav */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Dancing Script', cursive; /*typographie*/
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding-left: 7%;
+}
+
+.logo1{/*image du logo*/
+    width: 200px;
+}
+
+.nav-ul{/*mot nav*/
+    margin: auto;
+    list-style: none; /*enlever les style comme point et tt */
+    display: flex;
+    padding-right: 10%;
+    
+}
+.nav-ul a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px; 
+    width: 139px;/*largeur de ma case des mot navigation*/
+    font-size: 1.5rem;/*taille de mon texte de la bar navigation*/
+    transition: all 1s ease-out;
+    color: black;
+    text-decoration: none;
+    font-style: oblique;
+}
+.nav-ul a:hover{
+    background-color: rgb(234, 224, 227); /*arriere plan de mes mots de nav */
+    border-radius: 5px;
+}
+/*fin nav*/
+
+
+/*debut article */
+article{
+    color: rgb(0, 0, 0);
+    font-family: 'Poppins', sans-serif;
+    
+/*margin-bottom: 50px;/*ecart du haut entre l'article et la photo */
+}
+article p{
+    padding: 0 5%; /*ecart a gauche du text*/ 
+    text-align: center;
+    
+}
+
+/*titre*/
+h2{
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+    font-size: 43px;
+    font-family: 'Cinzel', serif;/*police*/
+    text-align: center;/*centrer le texte */
+}
+h3{
+    text-align: center;
+    font-size: 33px;
+    font-family: 'Cinzel', serif;
+    /*margin-bottom: 20px;*/
+
+}
+
+/*Premiere article */
+#part1{
+    display: flex;
+    justify-content: space-between;
+}
+#part1 a{
+    background-color: white;
+    margin: 20px;
+    padding: 10px;
+    text-decoration: none;
+    border-style: inset;
+}
+#part1 span{
+    color: black;
+}
+
+
+.p1{/*premier texte*/
+    font-size: 34px
+}
+
+.pp{/*ma photo*/
+    height: 350px;
+    width: 350px;
+    background-image: url(../image/alysson.png);
+    position: absolute;
+    left: 46%;
+    top: 38%;
+    border-radius: 50%;
+    border: 5px solid white;
+    background-size: cover;
+    z-index: 1;
+    /*animation*/
+    opacity: 0;
+    animation: picture 5s ease forwards;
+}
+@keyframes picture {
+    0%{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+
+.premier{ /*comprend h2 et p et a */
+    width: 45%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 90px;
+    opacity: 0;
+    animation: slideleft 5s ease forwards  ;
+}
+@keyframes slideleft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+
+.photo1{/*bureau cote */
+/*display: flex;
+justify-content: right ;*/
+    height: 810px;
+    width: 42%;
+    opacity: 0;
+    animation: slideright 5s ease forwards  ;
+}
+@keyframes slideright {
+    0%{
+        opacity: 0;
+        transform: translateX(200%);
+    }
+    
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+/*article2*/
+#part2{
+    background-color:white;
+}
+.parti{
+    display: flex;
+    justify-content: space-between;
+} 
+
+.test2{
+    background-color: rgb(234, 224, 227);
+    margin: 62px;
+    border-radius: 28px;
+}
+/*drapeau */
+.langue{
+    margin: 40px 45px;
+    position: relative;
+}
+
+.name {
+    backdrop-filter: blur(5px);
+    color: black;
+    font-size: 26px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    bottom: 29%; /* Positionner la bulle au-dessus du drapeau */
+    left: 19%;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.langue:hover .name {
+    visibility: visible;
+    opacity: 1;
+}
+
+.drapeau{
+    width: 180px;
+    height: 93px;
+
+}
+
+.photo2{
+    width: 25%;
+    /*height: 800px;*/
+}
+.photo2bis{
+    width: 25%;
+    /*height: 660px;*/
+    margin: 70px;
+    margin-left: 0;
+}
+/*article 3*/
+#part3{
+    background-color:rgb(234, 224, 227); 
+    height: 600px;
+}
+#part3bis{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+.photo3{
+    width: 20%;
+    border-radius: 100px ;/*bordure arrondi*/
+    box-shadow: 13px 12px 8px 4px rgb(255 255 255);
+    transition: all 0.5s;
+    height: 340px;
+}
+.photo3:hover{/*transition*/
+    filter: contrast(150%);
+    border-radius: 50%; 
+}
+#parti3bis2{
+    display: flex;
+    justify-content: space-around;
+    font-size: large;
+    
+}
+
+#parti3bis2 :hover{
+    background-color: white; /*arriere plan de mes mots de nav */
+    border-radius: 10px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+#parti3bis2 p{
+    text-decoration: none;
+    color: black;
+    font-size: x-large;
+}
+#part4{
+    background-color: white;
+}
+.photo4{
+    width: 30%;
+    height: 460px;
+    margin: 70px;
+}
+.photo4bis{
+    width: 30%;
+    height: 600px;
+}
+.p4{
+    margin: 40px 0px;
+    padding: 0; /*pour contrer le article p le padding sur tt les texte*/
+    
+}
+li{
+    margin: 30px 0px;
+    font-size: large;
+}
+
+@keyframes comp {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.Compétences{
+    opacity: 0;
+    animation: comp 5s ease forwards;
+}
+
+.pa4{
+    margin-top: 70px;
+    text-align: left;
+}
+/*article 5*/
+.expé{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+.job2{
+    background-color: white;
+    width: 300px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px;
+    box-shadow: inset 0px 0px 27px 13px rgb(245, 218, 210);
+    transition:
+        width 2s,
+        height 2s,
+        background-color 2s,
+        transform 2s;
+}
+.expé :hover{
+    background-color: #ffcccc;
+    width: 400px;
+    height: 300px;
+    transform:rotate(1turn);
+}
+.ales{
+    width: 300px;
+}
+
+/*finmain*/
+footer{
+    
+    background-color:rgb(249, 238, 238) ;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    padding: 10px;
+}
+
+footer a{
+    color: black;
+}
+footer p {
+    text-align: center;
+}
+footer div{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+@media screen and ( max-width:1000px) {
+    
+    .nav-ul{
+        display: none;
+        display: flex;
+        flex-direction: column;
+        margin-right: 0;
+        padding-right: 0;
+        font-size: 10px;
+        background-color: rgba(252, 252, 252, 0.467);
+        border-radius: 10px;
+    }
+    .navbar{
+        background: none;
+    }
+    .logo1{
+        
+        position: absolute;
+        top: 10px;
+        left: 10px;
+
+    }
+    header{
+        display: none;
+    }
+    .pp{
+        width: 200px;
+        height: 200px;
+    }
+}
+@media screen and (max-width:790px) {
+    .photo1{
+        display: none;
+        
+    }
+    .premier{
+        width: 100%;
+        margin-top: 33%;
+    }
+    .photo2 {
+        display: none;
+    }
+    .photo2bis{
+        display: none;
+    }
+    .parti{
+        display: flex;
+        justify-content: center;
+    }
+    .photo4 {
+        display: none;
+    }
+    .photo4bis {
+        display: none;
+    }
+    .ales{
+        display: none;
+    }
+    .pp{
+        width: 180px;
+        height: 180px;
+        top:2%;
+        left: 41%;
+    }
+
+    #parti3bis2{
+        display: none;
+    }
+    #part3bis{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .photo3{
+        width: 49%;
+        height: 230px;
+        
+    }
+    footer div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (max-width:415px){
+    .pp{
+        width: 180px;
+        height: 180px;
+        top:12%;
+        left: 11%;
+    }
+    .premier{
+        width: 100%;
+        margin-top: 68%;
+    }
+}

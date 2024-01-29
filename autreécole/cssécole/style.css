@@ -1,0 +1,155 @@
+header{
+    background-color: rgb(150, 186, 219);
+    
+}
+.fa-taillecolor{
+    position: fixed;
+    z-index: 1;
+    font-size: 35px;
+    color: white;
+    margin: 5px;
+}
+h1{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+h2{
+    font-size: 2em;
+    margin: 19px;
+}
+.haut{
+    display: flex;
+    justify-content: space-between;
+    height: 95px;
+    padding: 8px 24px;
+
+}
+
+main{
+    background-image: url("https://lh3.googleusercontent.com/p/AF1QipMuJ4URmVM6nHUymuNnytpZdepGaqviwLNrD9Jn=s1360-w1360-h1020");
+    background-size: cover;
+    height: 800px;
+    text-align: center;
+    filter: drop-shadow(2px 4px 6px black)
+    
+    
+}
+h3{
+    padding: 1%;
+    color: rgb(150, 186, 219);
+    font-size: 30px;
+}
+.matiere{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+.blocmatiere{
+    background-color: rgba(0, 0, 0, 0.227);
+    width: 260px;
+    filter: drop-shadow(-2px 1px 2px black);
+}
+ul{
+    text-align: left;
+    
+}
+
+.grade{
+    height: 110px;
+}
+.lien{
+    color: black;
+}
+footer a{
+    display: flex;
+    align-items: center;
+    color: black;
+}
+footer{
+    background-color: rgb(150, 186, 219);
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    text-decoration: underline;
+    
+}
+
+
+/* animation */
+@keyframes slideleft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes slideright {
+    0% {
+        opacity: 0;
+        transform: translateX(200%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes top {
+    0% {
+        opacity: 0;
+        
+    }
+    100% {
+        opacity: 1;
+        
+    }
+    
+}
+.anim{
+    opacity: 0;
+    animation: top 2s ease forwards;
+}
+.animation {
+    opacity: 0;
+    animation: slideleft 6s ease forwards;
+}
+.animate{
+    opacity: 0;
+    animation: slideright 12s ease forwards;
+}
+
+
+/*responsive*/
+
+.titrebis{
+    display: none;
+}
+@media screen and (max-width:845px){
+    main{
+        height: 100%;
+    }
+
+
+}
+@media screen and (max-width:700px){
+    .titre{
+        display: none;
+    }
+    .titrebis{
+        display: block;
+    }
+}
+@media screen and (max-width:500px){
+    
+    .matiere{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .titrebis{
+        display: none;
+    }
+    
+}
